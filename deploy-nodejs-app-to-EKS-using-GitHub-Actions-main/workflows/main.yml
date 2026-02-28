@@ -35,9 +35,8 @@ jobs:
         REPOSITORY: devopshint
         IMAGE_TAG: latest
       run: |
-        docker build -t devopshint .
-        docker tag devopshint:latest 242519999893.dkr.ecr.us-east-1.amazonaws.com/devopshint:latest
-        docker push 242519999893.dkr.ecr.us-east-1.amazonaws.com/devopshint:latest
+        docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+        docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
         
         
       
