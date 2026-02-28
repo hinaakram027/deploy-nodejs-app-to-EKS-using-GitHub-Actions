@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nodejs
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: nodejs
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: devopshint
-          image: 908198849120.dkr.ecr.ap-south-1.amazonaws.com/devopshint:1.1
+          image: 242519999893.dkr.ecr.us-east-1.amazonaws.com/devopshint
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
